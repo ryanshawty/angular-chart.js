@@ -126,6 +126,10 @@
           if (chart) chart.destroy();
         });
 
+          scope.$on('$reload', function () {
+              if (chart) chart.update();
+          });
+
         function resetChart (newVal/*, oldVal*/) {
           if (isEmpty(newVal)) return;
           var chartType = type || scope.chartType;

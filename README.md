@@ -106,6 +106,14 @@ created multiple times during angular `watch` lifecycle.
 
 angular-chart.js listen to the scope `destroy` event and destroy the chart when it happens.
 
+If you want to reload the canvas send a broadcast using:
+
+```
+$scope.$broadcast("$reload", {});
+```
+
+This wil repaint the charts (for example when a chart became visible)
+
 ## Colours
 
 There are a set of 7 default colours. Colours can be replaced using the `colours` attribute.
